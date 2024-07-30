@@ -1,0 +1,58 @@
+pa make:model User -m
+sleep 1
+pa make:model Role -m
+sleep 1
+pa make:model Permission
+sleep 1
+
+pa make:model Client -m
+sleep 1
+pa make:model Vehicle -m
+sleep 1
+pa make:migration CreateClientVehicleTable
+sleep 1
+
+pa make:model Supplier -m
+sleep 1
+
+pa make:model Fuel -m
+sleep 1
+pa make:model Tank -m
+sleep 1
+pa make:model Island -m
+sleep 1
+pa make:model Pump -m
+sleep 1
+
+pa make:model ProductCategory -m
+sleep 1
+pa make:model Product -m
+sleep 1
+
+pa make:model ServiceCategory -m
+sleep 1
+pa make:model Service -m
+sleep 1
+
+pa make:model PaymentMethod -m
+sleep 1
+
+pa make:model Purchase -m
+sleep 1
+pa make:migration CreateFuelPurchaseTable
+sleep 1
+pa make:migration CreateProductPurchaseTable
+sleep 1
+pa make:model PurchasePayment -m
+sleep 1
+
+pa make:model Sale -m
+sleep 1
+pa make:migration CreateFuelSaleTable
+sleep 1
+pa make:migration CreateProductSaleTable
+sleep 1
+pa make:migration CreateServiceSaleTable
+sleep 1
+pa make:model SalesPayment -m
+sleep 1
