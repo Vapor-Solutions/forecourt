@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('pumps', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('island_id')->constrained();
+            $table->string('name');
             $table->timestamps();
         });
     }

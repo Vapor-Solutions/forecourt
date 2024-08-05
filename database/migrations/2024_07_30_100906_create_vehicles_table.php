@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
+            $table->string('model')->nullable();
+            $table->string('make')->nullable();
+            $table->string('colour')->nullable();
+            $table->string('registration_number');
             $table->timestamps();
         });
     }

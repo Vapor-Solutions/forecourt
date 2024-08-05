@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('fuel_purchase', function (Blueprint $table) {
-            $table->id();
+            $table->foreignId('purchase_id')->constrained();
+            $table->foreignId('fuel_id')->constrained();
+            $table->decimal('amount_expected', 8, 2);
+            $table->decimal('amount_received',8, 2);
+            $table->decimal('unit_price');
             $table->timestamps();
         });
     }

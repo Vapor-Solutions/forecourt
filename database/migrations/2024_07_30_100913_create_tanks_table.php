@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('tanks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('fuel_id')->constrained();
+            $table->string('name');
+            $table->decimal('capacity', 8, 4);
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('payment_methods', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->decimal('minimum', 8, 2)->default(5);
+            $table->decimal('maximum', 8, 2);
             $table->timestamps();
         });
     }
